@@ -1,5 +1,5 @@
 {
-   "extends": ["stylelint-config-prettier"],
+   "extends": ["stylelint-config-suitcss", "stylelint-config-prettier"],
    "plugins": ["stylelint-suitcss"],
    "rules": {
       "suitcss/custom-property-no-outside-root": true,
