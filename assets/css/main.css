@@ -1,0 +1,200 @@
+@font-face {
+   font-display: swap;
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 400, 700;
+   src: url('../fonts/font-inter.woff') format('woff'),
+      url('../fonts/font-inter.woff2') format('woff2');
+}
+
+html {
+   font-size: 10px;
+}
+
+body {
+   font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+   margin: 0;
+}
+
+p {
+   margin: 0;
+}
+
+button {
+   border: none;
+   outline: none;
+   padding: 0;
+}
+
+:root {
+   --App--lightTheme: hsl(0, 0%, 100%);
+   --App--darkTheme: hsl(230, 17%, 14%);
+   --Card-background: hsl(227, 47%, 96%);
+   --Card-spaceTop: 0.3rem;
+   --Card-height: 20rem;
+   --Card--facebook-backgroundColor: hsl(208, 92%, 53%);
+   --Card--twitter-backgroundColor: hsl(203, 89%, 53%);
+   --Card--instagram-backgroundGradient: hsl(37, 97%, 70%), hsl(329, 70%, 58%);
+   --Card--youTube--backgroundColor: hsl(348, 97%, 39%);
+   --Card-audienceEvolution--up-color: hsl(163, 72%, 41%);
+   --Card-audienceEvolution--down-color: hsl(356, 69%, 56%);
+   --ThemeSwitcher--dark: hsl(210, 78%, 56%), hsl(146, 68%, 55%);
+   --ThemeSwitcher--light: hsl(230, 22%, 74%);
+   --textDarkBlue: hsl(230, 17%, 14%);
+   --textGrayishBlue: hsl(228, 12%, 44%);
+   --fontInter: 'Inter', sans-serif;
+   --textAmount: 4.8rem;
+   --textTitle: 2.4rem;
+   --textSmall: 1.4rem;
+   --spacing: 2rem;
+   --rounded: 0.4rem;
+   --fontMedium: 700;
+}
+
+.App {
+   background-color: var(--App--lightTheme);
+   font-family: var(--fontInter);
+   min-height: 100vh;
+   padding: var(--spacing);
+}
+
+.Header {
+   margin-bottom: calc(var(--spacing) * 2);
+}
+
+.Header-title {
+   color: var(--textDarkBlue);
+   font-size: var(--textTitle);
+   font-weight: var(--fontMedium);
+}
+
+.Header-totalFollowers {
+   border-bottom: 1px solid var(--textDarkBlue);
+   color: var(--textDarkBlue);
+   display: block;
+   font-size: var(--textSmall);
+   padding-bottom: var(--spacing);
+}
+
+.ThemeSwitcher {
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+   padding-top: var(--spacing);
+}
+
+.ThemeSwitcher-label {
+   color: var(--textDarkBlue);
+   font-size: var(--text-size);
+   font-weight: var(--fontMedium);
+}
+
+.Card {
+   align-items: flex-end;
+   background-color: var(--Card-background);
+   border-radius: var(--rounded);
+   display: flex;
+   height: var(--Card-height);
+   margin-bottom: var(--spacing);
+}
+
+.Card--mediumHeight {
+   height: calc(var(--Card-height) / 2);
+}
+
+.Card-button {
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   height: calc(100% - var(--Card-spaceTop));
+   justify-content: space-evenly;
+   width: 100%;
+}
+
+.Card--facebook {
+   background-color: var(--Card--facebook-backgroundColor);
+}
+
+.Card--twitter {
+   background-color: var(--Card--twitter-backgroundColor);
+}
+
+.Card--instagram {
+   background-image: linear-gradient(
+      to right,
+      var(--Card--instagram-backgroundGradient)
+   );
+}
+
+.Card--youtube {
+   background-color: var(--Card--youTube--backgroundColor);
+}
+
+.Card-socialMedia {
+   align-items: center;
+   display: flex;
+}
+
+.Card-nickname {
+   font-size: var(--textSmall);
+   margin-left: 0.6rem;
+}
+
+.Card-audience {
+   display: inline-flex;
+   flex-direction: column;
+}
+
+.Card-audienceAmount {
+   font-size: var(--textAmount);
+   font-weight: var(--fontMedium);
+}
+
+.Card-audienceType {
+   color: var(--textGrayishBlue);
+   font-size: var(--textSmall);
+   letter-spacing: 0.3rem;
+   text-transform: uppercase;
+}
+
+.Card-audienceEvolution {
+   font-size: var(--textSmall);
+}
+
+.Card-audienceEvolution--up,
+.Card-audienceEvolution--down {
+   position: relative;
+}
+
+.Card-audienceEvolution--up {
+   color: var(--Card-audienceEvolution--up-color);
+}
+
+.Card-audienceEvolution--down {
+   color: var(--Card-audienceEvolution--down-color);
+}
+
+.Card-audienceEvolution--up::before,
+.Card-audienceEvolution--down::before {
+   background-repeat: no-repeat;
+   background-size: cover;
+   content: '';
+   height: 5px;
+   left: -1.5rem;
+   position: absolute;
+   top: 0.7rem;
+   width: 10px;
+}
+
+.Card-audienceEvolution--up::before {
+   background-image: url('../images/icon-up.svg');
+}
+
+.Card-audienceEvolution--down::before {
+   background-image: url('../images/icon-down.svg');
+}
