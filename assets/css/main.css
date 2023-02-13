@@ -54,8 +54,12 @@ button {
    --Card-audienceEvolution--down-color: hsl(356, 69%, 56%);
    --ThemeSwitcher--dark: hsl(210, 78%, 56%), hsl(146, 68%, 55%);
    --ThemeSwitcher--light: hsl(230, 22%, 74%);
+   --ThemeSwitcher-rounded: 1.2rem;
+   --ThemeSwitcher-size: 2rem;
+   --veryDarkBlue: hsl(230, 17%, 14%);
    --textDarkBlue: hsl(230, 17%, 14%);
    --textGrayishBlue: hsl(228, 12%, 44%);
+   --textWhite: hsl(0, 0%, 100%);
    --fontInter: 'Inter', sans-serif;
    --textAmount: 4.8rem;
    --textTitle: 2.4rem;
@@ -115,11 +119,45 @@ button {
    justify-content: space-between;
    padding-top: var(--spacing);
 }
-
-.ThemeSwitcher-label {
+.ThemeSwitcher-text {
    color: var(--textDarkBlue);
    font-size: var(--text-size);
    font-weight: var(--fontMedium);
+}
+.ThemeSwitcher-label {
+   background-color: var(--ThemeSwitcher--light);
+   border-radius: var(--ThemeSwitcher-rounded);
+   height: var(--ThemeSwitcher-size);
+   position: relative;
+   width: calc(var(--ThemeSwitcher-size) * 2);
+}
+.ThemeSwitcher-checkbox {
+   height: 0;
+   visibility: hidden;
+   width: 0;
+}
+
+.ThemeSwitcher-label::after {
+   background-color: var(--textWhite);
+   border-radius: var(--ThemeSwitcher-rounded);
+   content: '';
+   height: calc(var(--ThemeSwitcher-size) * 4 / 5);
+   position: absolute;
+   right: calc(var(--ThemeSwitcher-size) / 10);
+   top: calc(var(--ThemeSwitcher-size) / 10);
+   transition: all 0.5s ease-in-out;
+   width: calc(var(--ThemeSwitcher-size) * 4 / 5);
+}
+.ThemeSwitcher-checkbox:checked + .ThemeSwitcher-label {
+   background-image: linear-gradient(to right, var(--ThemeSwitcher--dark));
+}
+.ThemeSwitcher-checkbox:checked + .ThemeSwitcher-label::after {
+   background-color: var(--veryDarkBlue);
+   right: calc(100% - var(--ThemeSwitcher-size) / 10);
+   transform: translateX(100%);
+}
+.ThemeSwitcher-label:active::after {
+   width: calc(var(--ThemeSwitcher-size) + 1.5rem);
 }
 
 .Main {
