@@ -1,3 +1,4 @@
+/* stylelint-disable rule-empty-line-before */
 @font-face {
    font-display: swap;
    font-family: 'Inter';
@@ -23,6 +24,14 @@ h3 {
 
 p {
    margin: 0;
+}
+
+figure {
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
 }
 
 button {
@@ -54,6 +63,25 @@ button {
    --spacing: 2rem;
    --rounded: 0.4rem;
    --fontMedium: 700;
+}
+
+.u-text-grayish-blue {
+   color: var(--textGrayishBlue);
+}
+
+.u-font-medium {
+   font-weight: var(--fontMedium);
+}
+
+.u-text-medium {
+   font-size: var(--textTitle);
+}
+
+.u-text-small {
+   font-size: var(--textSmall);
+}
+.u-relative {
+   position: relative;
 }
 
 .App {
@@ -94,26 +122,37 @@ button {
    font-weight: var(--fontMedium);
 }
 
+.Main {
+   margin-bottom: calc(var(--spacing) * 2);
+}
+
 .Card {
-   align-items: flex-end;
    background-color: var(--Card-background);
    border-radius: var(--rounded);
-   display: flex;
    height: var(--Card-height);
    margin-bottom: var(--spacing);
 }
 
-.Card--mediumHeight {
+.Card--flex {
+   align-items: flex-end;
+   display: flex;
+}
+
+.Card--medium {
    height: calc(var(--Card-height) / 2);
 }
 
 .Card-button {
    align-items: center;
+   border-radius: inherit;
+   height: calc(100% - var(--Card-spaceTop));
+   width: 100%;
+}
+
+.Card-button--flex {
    display: flex;
    flex-direction: column;
-   height: calc(100% - var(--Card-spaceTop));
    justify-content: space-evenly;
-   width: 100%;
 }
 
 .Card--facebook {
@@ -162,39 +201,96 @@ button {
    text-transform: uppercase;
 }
 
-.Card-audienceEvolution {
+.Card-audienceEvolution,
+.Card-percent {
    font-size: var(--textSmall);
 }
 
 .Card-audienceEvolution--up,
-.Card-audienceEvolution--down {
+.Card-audienceEvolution--down,
+.Card-percent--up,
+.Card-percent--down {
    position: relative;
 }
 
-.Card-audienceEvolution--up {
+.Card-audienceEvolution--up,
+.Card-percent--up {
    color: var(--Card-audienceEvolution--up-color);
 }
 
-.Card-audienceEvolution--down {
+.Card-audienceEvolution--down,
+.Card-percent--down {
    color: var(--Card-audienceEvolution--down-color);
 }
 
 .Card-audienceEvolution--up::before,
-.Card-audienceEvolution--down::before {
+.Card-audienceEvolution--down::before,
+.Card-percent--up::before,
+.Card-percent--down::before {
    background-repeat: no-repeat;
    background-size: cover;
    content: '';
    height: 5px;
-   left: -1.5rem;
    position: absolute;
-   top: 0.7rem;
    width: 10px;
 }
 
-.Card-audienceEvolution--up::before {
+.Card-audienceEvolution--up::before,
+.Card-audienceEvolution--down::before {
+   left: -1.5rem;
+   top: 0.7rem;
+}
+
+.Card-percent--up::before,
+.Card-percent--down::before {
+   right: 110%;
+   top: 50%;
+}
+
+.Card-audienceEvolution--up::before,
+.Card-percent--up::before {
    background-image: url('../images/icon-up.svg');
 }
 
-.Card-audienceEvolution--down::before {
+.Card-audienceEvolution--down::before,
+.Card-percent--down::before {
    background-image: url('../images/icon-down.svg');
+}
+
+.Overview-title {
+   color: var(--textGrayishBlue);
+   font-size: var(--textTitle);
+   margin-bottom: var(--spacing);
+}
+
+.Card-left,
+.Card-right {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   position: absolute;
+   top: 2rem;
+}
+.Card-left {
+   left: 2rem;
+   text-align: left;
+}
+.Card-right {
+   right: 2rem;
+   text-align: right;
+}
+
+.Footer {
+   font-size: 1.1rem;
+   text-align: center;
+}
+
+.Footer-link {
+   color: var(--textGrayishBlue);
+}
+
+@media (hover: hover) {
+   .Footer-link:hover {
+      cursor: pointer;
+   }
 }

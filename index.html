@@ -7,7 +7,7 @@
          rel="icon"
          type="image/png"
          sizes="32x32"
-         href="./images/favicon-32x32.png" />
+         href="./assets/images/favicon-32x32.png" />
       <title>Frontend Mentor | [Challenge Name Here]</title>
       <link
          rel="stylesheet"
@@ -35,15 +35,17 @@
          </header>
          <main class="Main">
             <div class="Dashboard">
-               <div class="Card Card--facebook">
+               <div class="Card Card--flex Card--facebook">
                   <button
                      type="button"
-                     class="Card-button"
+                     class="Card-button Card-button--flex"
                      title="facebook's followers">
                      <span class="Card-socialMedia">
                         <img
-                           src="./images/icon-facebook.svg"
-                           alt="icon facebook" />
+                           src="./assets/images/icon-facebook.svg"
+                           alt="icon facebook"
+                           width="20"
+                           height="20" />
                         <span class="Card-nickname">@nathanf</span>
                      </span>
                      <span class="Card-audience">
@@ -56,15 +58,17 @@
                      </span>
                   </button>
                </div>
-               <div class="Card Card--twitter">
+               <div class="Card Card--flex Card--twitter">
                   <button
                      type="button"
-                     class="Card-button"
+                     class="Card-button Card-button--flex"
                      title="twitter's followers">
                      <span class="Card-socialMedia">
                         <img
-                           src="./images/icon-twitter.svg"
-                           alt="icon twitter" />
+                           src="./assets/images/icon-twitter.svg"
+                           alt="icon twitter"
+                           width="20"
+                           height="20" />
                         <span class="Card-nickname">@nathanf</span>
                      </span>
                      <span class="Card-audience">
@@ -77,15 +81,17 @@
                      </span>
                   </button>
                </div>
-               <div class="Card Card--instagram">
+               <div class="Card Card--flex Card--instagram">
                   <button
                      type="button"
-                     class="Card-button"
+                     class="Card-button Card-button--flex"
                      title="instagram's followers">
                      <span class="Card-socialMedia">
                         <img
-                           src="./images/icon-instagram.svg"
-                           alt="icon instagram" />
+                           src="./assets/images/icon-instagram.svg"
+                           alt="icon instagram"
+                           width="20"
+                           height="20" />
                         <span class="Card-nickname">@realnathanf</span>
                      </span>
                      <span class="Card-audience">
@@ -98,15 +104,17 @@
                      </span>
                   </button>
                </div>
-               <div class="Card Card--youtube">
+               <div class="Card Card--flex Card--youtube">
                   <button
                      type="button"
-                     class="Card-button"
+                     class="Card-button Card-button--flex"
                      title="youtube's subscribers">
                      <span class="Card-socialMedia">
                         <img
-                           src="./images/icon-youtube.svg"
-                           alt="icon instagram" />
+                           src="./assets/images/icon-youtube.svg"
+                           alt="icon instagram"
+                           width="20"
+                           height="20" />
                         <span class="Card-nickname">Nathan F.</span>
                      </span>
                      <span class="Card-audience">
@@ -123,72 +131,200 @@
          </main>
          <section class="Overview">
             <h2 class="Overview-title">Overview - Today</h2>
-            <article class="Card Card--mediumHeight">
-               <h3>Page Wiews</h3>
-               <span>87</span>
-               <img src="./images/icon-facebook.svg" alt="icon facebook" />
-               <span><img src="./images/icon-up.svg" alt="icon up" />3%</span>
-            </article>
-            <article class="Card Card--mediumHeight">
-               <h3>Likes</h3>
-               <span>52</span>
-               <img src="./images/icon-facebook.svg" alt="icon facebook" />
-               <span
-                  ><img src="./images/icon-down.svg" alt="icon down" />2%</span
-               >
-            </article>
-            <article class="Card Card--mediumHeight">
-               <h3>Likes</h3>
-               <span>5462</span>
-               <img src="./images/icon-instagram.svg" alt="icon instagram" />
-               <span
-                  ><img src="./images/icon-up.svg" alt="icon up" />2257%</span
-               >
-            </article>
-            <article class="Card Card--mediumHeight">
-               <h3>Profile Views</h3>
-               <span>52k</span>
-               <img src="./images/icon-instagram.svg" alt="icon instagram" />
-               <span
-                  ><img src="./images/icon-up.svg" alt="icon up" />1375%</span
-               >
-            </article>
-            <article class="Card Card--mediumHeight">
-               <h3>Retweets</h3>
-               <span>117</span>
-               <img src="./images/icon-twitter.svg" alt="icon twitter" />
-               <span><img src="./images/icon-up.svg" alt="icon up" />303%</span>
-            </article>
-            <article class="Card Card--mediumHeight">
-               <h3>Likes</h3>
-               <span>507</span>
-               <img src="./images/icon-twitter.svg" alt="icon twitter" />
-               <span><img src="./images/icon-up.svg" alt="icon up" />553%</span>
-            </article>
-            <article class="Card Card--mediumHeight">
-               <h3>Likes</h3>
-               <span>107</span>
-               <img src="./images/icon-youtube.svg" alt="icon youtube" />
-               <span
-                  ><img src="./images/icon-down.svg" alt="icon down" />19%</span
-               >
-            </article>
-            <article class="Card Card--mediumHeight">
-               <h3>Total Views</h3>
-               <span>1407</span>
-               <img src="./images/icon-youtube.svg" alt="icon youtube" />
-               <span><img src="./images/icon-up.svg" alt="icon up" />12%</span>
-            </article>
+            <div class="Card Card--medium">
+               <button type="button" class="Card-button u-relative">
+                  <span class="Card-left">
+                     <span
+                        class="u-text-small u-text-grayish-blue u-font-medium"
+                        >Page Wiews</span
+                     >
+                     <span class="u-text-medium u-font-medium">87</span>
+                  </span>
+                  <span class="Card-right">
+                     <span>
+                        <img
+                           src="./assets/images/icon-facebook.svg"
+                           alt="icon facebook"
+                           width="20"
+                           height="20" />
+                     </span>
+                     <span class="Card-percent Card-percent--up">3%</span>
+                  </span>
+               </button>
+            </div>
+            <div class="Card Card--medium">
+               <button type="button" class="Card-button u-relative">
+                  <span class="Card-left">
+                     <span
+                        class="u-text-small u-text-grayish-blue u-font-medium"
+                        >Likes</span
+                     >
+                     <span class="u-text-medium u-font-medium">52</span>
+                  </span>
+                  <span class="Card-right">
+                     <span class="span">
+                        <img
+                           src="./assets/images/icon-facebook.svg"
+                           alt="icon facebook"
+                           width="20"
+                           height="20" />
+                     </span>
+                     <span class="Card-percent Card-percent--down">2%</span>
+                  </span>
+               </button>
+            </div>
+            <div class="Card Card--medium">
+               <button type="button" class="Card-button u-relative">
+                  <span class="Card-left">
+                     <span
+                        class="span u-text-small u-text-grayish-blue u-font-medium"
+                        >Likes</span
+                     >
+                     <span class="span u-text-medium u-font-medium">5462</span>
+                  </span>
+                  <span class="Card-right">
+                     <span class="span">
+                        <img
+                           src="./assets/images/icon-instagram.svg"
+                           alt="icon instagram"
+                           width="20"
+                           height="20" />
+                     </span>
+                     <span class="span Card-percent Card-percent--up"
+                        >2257%</span
+                     >
+                  </span>
+               </button>
+            </div>
+            <div class="Card Card--medium">
+               <button type="button" class="Card-button u-relative">
+                  <span class="Card-left">
+                     <span
+                        class="span u-text-small u-text-grayish-blue u-font-medium"
+                        >Profile Views</span
+                     >
+                     <span class="span u-text-medium u-font-medium">52k</span>
+                  </span>
+                  <span class="Card-right">
+                     <span class="span">
+                        <img
+                           src="./assets/images/icon-instagram.svg"
+                           alt="icon instagram"
+                           width="20"
+                           height="20" />
+                     </span>
+                     <span class="span Card-percent Card-percent--up"
+                        >1375%</span
+                     >
+                  </span>
+               </button>
+            </div>
+            <div class="Card Card--medium">
+               <button type="button" class="Card-button u-relative">
+                  <span class="Card-left">
+                     <span
+                        class="span u-text-small u-text-grayish-blue u-font-medium"
+                        >Retweets</span
+                     >
+                     <span class="span u-text-medium u-font-medium">117</span>
+                  </span>
+                  <span class="Card-right">
+                     <span class="span">
+                        <img
+                           src="./assets/images/icon-twitter.svg"
+                           alt="icon twitter"
+                           width="20"
+                           height="20" />
+                     </span>
+                     <span class="span Card-percent Card-percent--up"
+                        >303%</span
+                     >
+                  </span>
+               </button>
+            </div>
+            <div class="Card Card--medium">
+               <button type="button" class="Card-button u-relative">
+                  <span class="Card-left">
+                     <span
+                        class="span u-text-small u-text-grayish-blue u-font-medium"
+                        >Likes</span
+                     >
+                     <span class="span u-text-medium u-font-medium">507</span>
+                  </span>
+
+                  <span class="Card-right">
+                     <span class="span">
+                        <img
+                           src="./assets/images/icon-twitter.svg"
+                           alt="icon twitter"
+                           width="20"
+                           height="20" />
+                     </span>
+                     <span class="span Card-percent Card-percent--up"
+                        >553%</span
+                     >
+                  </span>
+               </button>
+            </div>
+            <div class="Card Card--medium">
+               <button type="button" class="Card-button u-relative">
+                  <span class="Card-left">
+                     <span
+                        class="span u-text-small u-text-grayish-blue u-font-medium"
+                        >Likes</span
+                     >
+                     <span class="span u-text-medium u-font-medium">107</span>
+                  </span>
+                  <span class="Card-right">
+                     <span class="span">
+                        <img
+                           src="./assets/images/icon-youtube.svg"
+                           alt="icon youtube"
+                           width="20"
+                           height="20" />
+                     </span>
+                     <span class="span Card-percent Card-percent--down"
+                        >19%</span
+                     >
+                  </span>
+               </button>
+            </div>
+            <div class="Card Card--medium">
+               <button type="button" class="Card-button u-relative">
+                  <span class="Card-left">
+                     <span
+                        class="span u-text-small u-text-grayish-blue u-font-medium"
+                        >Total Views</span
+                     >
+                     <span class="span u-text-medium u-font-medium">1407</span>
+                  </span>
+
+                  <span class="Card-right">
+                     <span class="span">
+                        <img
+                           src="./assets/images/icon-youtube.svg"
+                           alt="icon youtube"
+                           width="20"
+                           height="20" />
+                     </span>
+                     <span class="span Card-percent Card-percent--down"
+                        >12%</span
+                     >
+                  </span>
+               </button>
+            </div>
          </section>
-         <footer class="footer">
+         <footer class="Footer">
             Challenge by
             <a
+               class="Footer-link"
                rel="noopener"
                href="https://www.frontendmentor.io?ref=challenge"
                target="_blank"
                >Frontend Mentor</a
             >. Coded by
             <a
+               class="Footer-link"
                href="https://www.twitter.com/luismacode"
                target="_blank"
                rel="noopener"
