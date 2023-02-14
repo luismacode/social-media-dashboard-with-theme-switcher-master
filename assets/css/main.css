@@ -59,6 +59,9 @@ button {
    --veryDarkBlue: hsl(230, 17%, 14%);
    --textDarkBlue: hsl(230, 17%, 14%);
    --textGrayishBlue: hsl(228, 12%, 44%);
+   --textDesaturedBlue: hsl(228, 34%, 66%);
+   --backgroundDarkBlue: hsl(228, 28%, 20%);
+   --veryDarkBlue: hsl(232, 19%, 15%);
    --textWhite: hsl(0, 0%, 100%);
    --fontInter: 'Inter', sans-serif;
    --textAmount: 4.8rem;
@@ -93,6 +96,10 @@ button {
    font-family: var(--fontInter);
    min-height: 100vh;
    padding: var(--spacing);
+   transition: background 0.4s ease-in-out;
+}
+.App--darkTheme {
+   background-color: var(--App--darkTheme);
 }
 
 .Header {
@@ -103,6 +110,10 @@ button {
    color: var(--textDarkBlue);
    font-size: var(--textTitle);
    font-weight: var(--fontMedium);
+   transition: color 0.4s ease-in-out;
+}
+.App--darkTheme .Header-title {
+   color: var(--textWhite);
 }
 
 .Header-totalFollowers {
@@ -111,6 +122,12 @@ button {
    display: block;
    font-size: var(--textSmall);
    padding-bottom: var(--spacing);
+   transition: color 0.4s ease-in-out;
+}
+
+.App--darkTheme .Header-totalFollowers {
+   border-bottom-color: var(--textDesaturedBlue);
+   color: var(--textDesaturedBlue);
 }
 
 .ThemeSwitcher {
@@ -123,6 +140,10 @@ button {
    color: var(--textDarkBlue);
    font-size: var(--text-size);
    font-weight: var(--fontMedium);
+   transition: color 0.4s ease-in-out;
+}
+.App--darkTheme .ThemeSwitcher-text {
+   color: var(--textDesaturedBlue);
 }
 .ThemeSwitcher-label {
    background-color: var(--ThemeSwitcher--light);
@@ -184,9 +205,13 @@ button {
    align-items: center;
    border-radius: inherit;
    height: calc(100% - var(--Card-spaceTop));
+   transition: background 0.4s ease-in-out;
    width: 100%;
 }
 
+.App--darkTheme .Card-button {
+   background-color: var(--backgroundDarkBlue);
+}
 .Card-button--flex {
    display: flex;
    flex-direction: column;
@@ -220,6 +245,10 @@ button {
 .Card-nickname {
    font-size: var(--textSmall);
    margin-left: 0.6rem;
+   transition: color 0.4s ease-in-out;
+}
+.App--darkTheme .Card-nickname {
+   color: var(--textDesaturedBlue);
 }
 
 .Card-audience {
@@ -230,6 +259,10 @@ button {
 .Card-audienceAmount {
    font-size: var(--textAmount);
    font-weight: var(--fontMedium);
+   transition: color 0.4s ease-in-out;
+}
+.App--darkTheme .Card-audienceAmount {
+   color: var(--textWhite);
 }
 
 .Card-audienceType {
@@ -242,6 +275,14 @@ button {
 .Card-audienceEvolution,
 .Card-percent {
    font-size: var(--textSmall);
+   transition: color 0.4s ease-in-out;
+}
+.Card-amount {
+   transition: color 0.4s ease-in-out;
+}
+.App--darkTheme .Card-audienceEvolution,
+.App--darkTheme .Card-amount {
+   color: var(--textWhite);
 }
 
 .Card-audienceEvolution--up,
@@ -299,6 +340,10 @@ button {
    color: var(--textGrayishBlue);
    font-size: var(--textTitle);
    margin-bottom: var(--spacing);
+   transition: color 0.4s ease-in-out;
+}
+.App--darkTheme .Overview-title {
+   color: var(--textWhite);
 }
 
 .Card-left,
