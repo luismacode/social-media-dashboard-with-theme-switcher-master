@@ -101,6 +101,18 @@ button {
 .App--darkTheme {
    background-color: var(--App--darkTheme);
 }
+.App-inner {
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 40rem;
+}
+
+@media screen and (min-width: 1024px) {
+   .App-inner {
+      max-width: 1200px;
+      width: 90%;
+   }
+}
 
 .Header {
    margin-bottom: calc(var(--spacing) * 2);
@@ -181,10 +193,33 @@ button {
    width: calc(var(--ThemeSwitcher-size) + 1.5rem);
 }
 
+@media screen and (min-width: 1024px) {
+   .Header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+   }
+   .Header-totalFollowers {
+      border-bottom: none;
+   }
+   .ThemeSwitcher {
+      padding-top: 0;
+   }
+   .ThemeSwitcher-text {
+      margin-right: 1rem;
+   }
+}
 .Main {
    margin-bottom: calc(var(--spacing) * 2);
 }
 
+@media screen and (min-width: 1024px) {
+   .Dashboard {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(4, 1fr);
+   }
+}
 .Card {
    background-color: var(--Card-background);
    border-radius: var(--rounded);
@@ -342,6 +377,13 @@ button {
    margin-bottom: var(--spacing);
    transition: color 0.4s ease-in-out;
 }
+@media screen and (min-width: 1024px) {
+   .Overview-inner {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(4, 1fr);
+   }
+}
 .App--darkTheme .Overview-title {
    color: var(--textWhite);
 }
@@ -368,6 +410,15 @@ button {
    text-align: center;
 }
 
+@media screen and (min-width: 1024px) {
+   .Footer {
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      text-align: center;
+      width: 100%;
+   }
+}
 .Footer-link {
    color: var(--textGrayishBlue);
 }
