@@ -43,7 +43,9 @@ button {
 :root {
    --App--lightTheme: hsl(0, 0%, 100%);
    --App--darkTheme: hsl(230, 17%, 14%);
-   --Card-background: hsl(227, 47%, 96%);
+   --Card-background: hsl(225, 100%, 98%);
+   --Card-onHover-background: hsl(227, 47%, 96%);
+   --Card-onHover-darkBackground: hsl(240, 51%, 45%);
    --Card-spaceTop: 0.3rem;
    --Card-height: 20rem;
    --Card--facebook-backgroundColor: hsl(208, 92%, 53%);
@@ -198,6 +200,7 @@ button {
       align-items: center;
       display: flex;
       justify-content: space-between;
+      padding-top: 6rem;
    }
    .Header-totalFollowers {
       border-bottom: none;
@@ -238,10 +241,14 @@ button {
 
 .Card-button {
    align-items: center;
+   background-color: var(--Card-background);
    border-radius: inherit;
    height: calc(100% - var(--Card-spaceTop));
    transition: background 0.4s ease-in-out;
    width: 100%;
+}
+.card-button--h100 {
+   height: 100%;
 }
 
 .App--darkTheme .Card-button {
@@ -424,6 +431,16 @@ button {
 }
 
 @media (hover: hover) {
+   .ThemeSwitcher-label:hover {
+      cursor: pointer;
+   }
+   .Card-button:hover {
+      background-color: var(--Card-onHover-background);
+      cursor: pointer;
+   }
+   .App--darkTheme .Card-button:hover {
+      background-color: var(--Card-onHover-darkBackground);
+   }
    .Footer-link:hover {
       cursor: pointer;
    }
