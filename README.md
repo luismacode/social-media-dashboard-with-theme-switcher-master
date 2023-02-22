@@ -28,7 +28,10 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot](./screenshot.jpg)
+![social media dashboard theme light mobile](./screenshots/social-media-dashboard-theme-light-mobile.jpeg)
+![social media dashboard theme dark mobile](./screenshots/social-media-dashboard-theme-dark-mobile.jpeg)
+![social media dashboard theme light desktop](./screenshots/social-media-dashboard-theme-light-desktop.jpeg)
+![social media dashboard theme dark desktop](./screenshots/social-media-dashboard-theme-dark-desktop.jpeg)
 
 ### Links
 
@@ -44,38 +47,16 @@ Users should be able to:
 - SUIT CSS Methodology
 - Flexbox
 - CSS Grid
+- Utility classes
 - Mobile-first workflow
 - Javascript modules
 
 ### What I learned
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-### Continued development
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+With this challenge I learned how to use the suitCSS methodology.
 
 ## Author
 
 - Linkedin - [luismachaca](https://www.linkedin.com/in/luismachaca)
 - Frontend Mentor - [@luismacode](https://www.frontendmentor.io/profile/luismacode)
 - Twitter - [@luismacode](https://www.twitter.com/luismacode)
-
-## Acknowledgments
