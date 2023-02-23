@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/social-media-dashboard-with-theme-switcher-master-ujyfY9sRko)
+- Live Site URL: [live site](https://luismacode.github.io/social-media-dashboard-with-theme-switcher-master/)
 
 ## My process
 
